@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APCA Color Contrast Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>APCA Color Contrast Calculator</h1>
+        <div class="color-inputs">
+            <div class="color-group">
+                <label for="foreground-color">Foreground Color:</label>
+                <input type="color" id="foreground-color" value="#000000">
+                <input type="text" id="foreground-hex" value="#000000">
+            </div>
+            <div class="color-group">
+                <label for="background-color">Background Color:</label>
+                <input type="color" id="background-color" value="#FFFFFF">
+                <input type="text" id="background-hex" value="#FFFFFF">
+            </div>
+        </div>
+        <button id="calculate-btn">Calculate Contrast</button>
+        <div class="result">
+            <h2>APCA Contrast Value: <span id="contrast-value">N/A</span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
