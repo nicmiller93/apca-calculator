@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APCA Color Contrast Calculator</title>
+    <title>APCA & WCAG Contrast Checker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css">
     <link rel="stylesheet" href="styles.css">
+    
+    
 </head>
 <body>
     <div class="container">
-        <h1>APCA Color Contrast Calculator</h1>
-        <div class="color-inputs">
-            <div class="color-group">
-                <label for="foreground-color">Foreground Color:</label>
-                <input type="color" id="foreground-color" value="#000000">
-                <input type="text" id="foreground-hex" value="#000000">
-            </div>
-            <div class="color-group">
-                <label for="background-color">Background Color:</label>
-                <input type="color" id="background-color" value="#FFFFFF">
-                <input type="text" id="background-hex" value="#FFFFFF">
-            </div>
-        </div>
-        <button id="calculate-btn">Calculate Contrast</button>
-        <div class="result">
-            <h2>APCA Contrast Value: <span id="contrast-value">N/A</span></h2>
-        </div>
+        <div id="color-picker-container">
+            <div class="container-item">
+        <label for="text-color-picker">Text Color</label>
+    <div id="text-color-picker"></div>
     </div>
+    <div class="container-item">
+    <label for="background-color-picker">Background Color</label>
+    <div id="background-color-picker"></div>
+    </div>
+    </div>
+    <div id="result"></div>
 
-    <script src="script.js"></script>
+    <div id="font-contrast-table">
+        <table>
+            <thead id="font-weight-header">
+                <tr class="header-row">
+                    <th id="placeholder"></th>
+                    <th id="font-weight" colspan="9"><label>Font Weight</label></th>
+                    </div>
+                </tr>
+            </thead>
+            <thead>
+                <tr class="header-row">
+                    <th id="font-size"><label>Font Size</label></th>
+                    <th>100</th><th>200</th><th>300</th><th>400</th><th>500</th>
+                    <th>600</th><th>700</th><th>800</th><th>900</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+    <input type="hidden" id="textColor" value="#000000">
+    <input type="hidden" id="bgColor" value="#ffffff">
+
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
